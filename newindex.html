@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+.container{
+    margin: 27px;
+    /* background-color: rgb(46, 64, 65); */
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.firstrow{
+    margin-top: 20px;
+}
+.screen{
+    font-size: medium;
+    
+    border: 1px solid;
+    border-radius: 54px;
+    padding: 7px;
+    width: 250px;
+    height: 25px;
+}
+.btn{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: medium;
+    margin: 2px;
+    border: none;
+   border-radius: 54px;
+   width: 54px;
+   height:  54px;
+    
+}
+.btn-last{
+    width: 114px;
+}
+.btn-new{
+    background-color: rgb(235, 235, 0);
+}
+
+
+
+</style>
+<body>
+    <div class="container" >
+        <div class="calculator">
+            <form>
+            <input class="screen" type="text" name="display">
+            </div>
+            <div class="button">
+                <div class="firstrow">
+                    <input type="button" class="btn btn-new" value="AC" onclick="display.value = '' ">
+                    <input type="button" class="btn btn-new" value="DE" onclick="display.value = display.value.toString().slice(0,-1)">
+                    <input type="button" class="btn btn-new" value="%" onclick="display.value +='%'">
+                    <input type="button" class="btn btn-new" value="/" onclick="display.value +='/'">
+                </div>
+                <div class="secondrow" >
+                <input type="button" class="btn" value="7" onclick="display.value +='7' ">
+            <input type="button" class="btn" value="8" onclick="display.value +='8'">
+            <input type="button" class="btn" value="9" onclick="display.value +='9'">
+            <input type="button" class="btn btn-new" value="*" onclick="display.value +='*'">
+        </div>
+        <div class="thirdrow">
+            <input type="button" class="btn" value="4" onclick="display.value +='4'">
+            <input type="button" class="btn" value="5" onclick="display.value +='5'">
+            <input type="button" class="btn" value="6" onclick="display.value +='6'">
+            <input type="button" class="btn btn-new" value="-" onclick="display.value +='-'">
+        </div>
+        <div class="fourthrow">
+            <input type="button" class="btn" value="1" onclick="display.value +='1'">
+            <input type="button" class="btn" value="2" onclick="display.value +='2'">
+            <input type="button" class="btn" value="3" onclick="display.value +='3'">
+            <input type="button" class="btn btn-new" value="+" onclick="display.value +='+'">
+        </div>
+        <div class="fifthrow">
+            <input type="button" class="btn" value="0" onclick="display.value +='0'">
+            <input type="button" class="btn" value="." onclick="display.value +='.'">
+            <input type="button" class="btn btn-last" value="=" onclick="display.value = eval(display.value)">
+        </div>
+    </div>
+    </form>
+</div>
+
+<script>
+    //  let string= "";
+    //  let buttons = document.querySelectorAll('.button');
+    //  Array.from(buttons).forEach(button)=>{
+    //  button.addEventListener
+    //  }  
+    </script>
+</body>
+</html>
